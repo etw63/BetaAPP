@@ -1,0 +1,20 @@
+﻿
+<h2>Example Miliatry Occupation Codes (MOC)</h2>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.mocDesc}}
+    <button class="delete"
+            (click)="delete(hero); $event.stopPropagation()">
+      x
+    </button>
+  </li>
+</ul>
+<div *ngIf="selectedHero">
+  <h2>
+    {{selectedHero.mocDesc | uppercase}} was my occupation
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+ 
+</div>
+<hero-search></hero-search>

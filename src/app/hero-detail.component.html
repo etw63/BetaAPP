@@ -1,0 +1,22 @@
+﻿<div *ngIf="hero">
+  <h2>{{hero.mocDesc}} description</h2>
+  <div>
+    <label>MOC: </label>{{hero.name}}
+  </div>
+  <div>
+    <label>Tag1: </label>{{hero.Tag1}}
+  </div>
+  <div>
+    <label>Tag2: </label>{{hero.Tag2}}
+  </div>
+  <div>
+    <label>Tag3: </label>{{hero.Tag3}}
+  </div>
+  <div>
+    <label>Civilian job equivalent: </label>{{hero.civ}}
+  </div>
+  <div>
+    <label>Description of civilian job: </label>{{hero.civDesc}}
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>
